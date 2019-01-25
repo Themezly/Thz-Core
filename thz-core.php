@@ -265,6 +265,9 @@ if( ! class_exists( 'ThzCore_Plugin' ) ) {
 				'post_type' => 'page',
 				'args'      => $args
 			);
+			
+			// Page tags
+			register_taxonomy_for_object_type( 'post_tag', 'page' );
 				
         	$thz_taxonomies = apply_filters( 'thz_filter_taxonomies_register', $thz_taxonomies );
 			

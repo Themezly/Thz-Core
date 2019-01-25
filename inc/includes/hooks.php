@@ -381,3 +381,29 @@ if ( ! function_exists( '_thz_core_filter_user_contacts' ) ){
 
 }
 add_filter('user_contactmethods','_thz_core_filter_user_contacts',10,1);
+
+
+
+/**
+ * Display the pages in tag and category archives
+ */
+if ( ! function_exists( '_thz_core_action_pages_archives' ) ){
+	
+	function _thz_core_action_pages_archives( $wp_query ) {
+		
+		if ( !is_admin() && !is_preview() ) {
+			$my_post_array = array('post','page');
+			
+			if ( $wp_query->get( 'category_name' ) || $wp_query->get( 'cat' ) ){
+				$wp_query->set( 'post_type', $my_post_array );
+			}
+			
+			if ( $wp_query->get( 'tag' ) ) {
+				$wp_query->set( 'post_type', $my_post_array );
+			}
+		}
+	}
+
+}
+
+add_action( 'pre_get_posts', '_thz_core_action_pages_archives' );

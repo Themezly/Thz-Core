@@ -31,6 +31,25 @@ if ( ! function_exists( 'thz_core_protect_email' ) ) {
 
 }
 
+/**
+ * @param string $code name of the shortcode
+ * @param string $content
+ *
+ * @return string content with shortcode striped
+ */
+function _thz_strip_shortcode( $code, $content ) {
+
+	global $shortcode_tags;
+
+	$stack          = $shortcode_tags;
+	$shortcode_tags = array( $code => 1 );
+
+	$content = strip_shortcodes( $content );
+
+	$shortcode_tags = $stack;
+
+	return $content;
+}
 
 function thz_core_activation_url(){
 	return apply_filters( 'thz_core_activation_url', 'https://members.themezly.com/' );
