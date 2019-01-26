@@ -59,7 +59,11 @@ if( ! class_exists( 'ThzCore_Plugin' ) ) {
 			
 			$is_creatus 	= false;
 			$current_theme 	= wp_get_theme();
-			
+
+			if( 'creatus' == $current_theme->get( 'Template' ) ){
+				$is_creatus = true;
+			}
+						
 			if ( 'creatus' == get_option( 'template' ) ) {
 				$is_creatus = true;
 			}
@@ -80,10 +84,6 @@ if( ! class_exists( 'ThzCore_Plugin' ) ) {
 				}else{
 					$is_creatus = false;
 				}
-			}
-			
-			if( 'creatus' == $current_theme->get( 'Template' ) ){
-				$is_creatus = true;
 			}
 			
 			return $is_creatus;
