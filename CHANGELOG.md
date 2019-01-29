@@ -1,4 +1,5 @@
 <div class="thz-docs-codeblock" markdown="1">
+
 ## Version: 1.5.1 (January 29th, 2019)
  - Moved tags and page cats from theme
  - Check theme name first on themes preview
