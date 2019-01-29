@@ -37,18 +37,20 @@ if ( ! function_exists( 'thz_core_protect_email' ) ) {
  *
  * @return string content with shortcode striped
  */
-function _thz_strip_shortcode( $code, $content ) {
-
-	global $shortcode_tags;
-
-	$stack          = $shortcode_tags;
-	$shortcode_tags = array( $code => 1 );
-
-	$content = strip_shortcodes( $content );
-
-	$shortcode_tags = $stack;
-
-	return $content;
+if ( ! function_exists( '_thz_strip_shortcode' ) ) {
+	function _thz_strip_shortcode( $code, $content ) {
+	
+		global $shortcode_tags;
+	
+		$stack          = $shortcode_tags;
+		$shortcode_tags = array( $code => 1 );
+	
+		$content = strip_shortcodes( $content );
+	
+		$shortcode_tags = $stack;
+	
+		return $content;
+	}
 }
 
 function thz_core_activation_url(){
