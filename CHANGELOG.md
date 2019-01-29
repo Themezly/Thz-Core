@@ -1,4 +1,8 @@
 <div class="thz-docs-codeblock" markdown="1">
+## Version: 1.5.1 (January 29th, 2019)
+ - Moved tags and page cats from theme
+ - Check theme name first on themes preview
+ 
 ## Version: 1.5.0 (January 23rd, 2019)
  - Moved pageblocks to Creatus Pro
  - Moved socials to Creatus Pro

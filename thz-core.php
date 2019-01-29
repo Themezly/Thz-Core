@@ -5,7 +5,7 @@ Plugin URI: https://github.com/Themezly/Thz-Core
 Description: Thz Core Plugin for Creatus Theme
 Author: Themezly
 Author URI: http://themezly.com
-Version: 1.5.0
+Version: 1.5.1
 License: GNU/GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2
 */
@@ -19,7 +19,7 @@ if( ! class_exists( 'ThzCore_Plugin' ) ) {
 	class ThzCore_Plugin{
 	
 	
-		const VERSION = '1.5.0';
+		const VERSION = '1.5.1';
 		protected static $_instance = null;
 		/**
 		 * @var ThzCore_Activation_Option
