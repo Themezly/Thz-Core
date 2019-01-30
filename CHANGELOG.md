@@ -1,5 +1,8 @@
 <div class="thz-docs-codeblock" markdown="1">
 
+## Version: 1.5.2 (January 30th, 2019)
+ - Check theme version before the function. Thnx @flavious!
+ 
 ## Version: 1.5.1 (January 29th, 2019)
  - Moved tags and page cats from theme
  - Check theme name first on themes preview
