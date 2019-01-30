@@ -58,7 +58,7 @@ if ( ! function_exists( 'thz_core_theme_version' ) ) {
  *
  * @return string content with shortcode striped
  */
-if ( ! function_exists( '_thz_strip_shortcode' ) ) {
+if ( thz_core_theme_version() > '1.5.0' && !function_exists( '_thz_strip_shortcode' ) ) {
 	function _thz_strip_shortcode( $code, $content ) {
 	
 		global $shortcode_tags;
