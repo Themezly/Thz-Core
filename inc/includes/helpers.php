@@ -32,6 +32,27 @@ if ( ! function_exists( 'thz_core_protect_email' ) ) {
 }
 
 /**
+ * Get theme version
+*/
+if ( ! function_exists( 'thz_core_theme_version' ) ) {
+	
+	function thz_core_theme_version(){
+		
+		if ( function_exists( 'thz_theme_version' ) ) {
+			
+			return thz_theme_version();
+			
+		}else{
+		
+			$theme = wp_get_theme();
+			$current_version = 'creatus' == $theme->get('Template') ? $theme->parent()->get('Version') : $theme->get('Version');
+			return $current_version;
+		
+		}
+	}
+}
+
+/**
  * @param string $code name of the shortcode
  * @param string $content
  *
