@@ -232,7 +232,7 @@ add_action( 'admin_bar_menu', '_thz_core_action_frontend_admin_links', 2000 );
 
 function _thz_core_action_backend_admin_links() {
 
-	if ( ! is_super_admin() || thz_theme_version() <= '1.1.3' ) {
+	if ( ! is_super_admin() || thz_core_theme_version() <= '1.1.3' ) {
 		return;
 	}
 	
